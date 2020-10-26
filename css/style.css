@@ -1,0 +1,165 @@
+:root {
+    --dark-color: rgba(5, 10, 37, 0.5);
+    --medium-color: #333;
+    --light-color: rgb(255, 255, 255);
+}
+
+body {
+    background: black;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+header{
+    width: 100%;    
+    height: 800px;
+    background-image: linear-gradient( rgb(255 255 255 / 0%) 85%, rgb(0 0 0) ),url(../img/SmartPhone.jpeg);
+    clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0% 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: header-img;
+    animation-duration: 3S;
+    animation-fill-mode: forwards;
+}
+
+header h1 {
+ color: whitesmoke;   
+ text-align: center;
+ position: relative;
+ animation-name: header-h1;
+ animation-duration: 3S;
+ animation-fill-mode: forwards;
+}
+
+h1 {
+    font-weight: 500;
+    margin: 0;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+#text {
+    color: whitesmoke;   
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    top: 100px;
+    position: relative;
+    animation-name: header-text;
+    animation-duration: 6S;
+    animation-fill-mode: forwards;
+}
+
+main {
+    width: 60%;
+    height: 500px;
+    margin: auto;
+    margin-top: 75px;
+    /* background: black; */
+    /* color: black; */
+    color: whitesmoke;
+    text-align: center;
+}
+
+main h3 {
+    text-indent: 30px;
+    text-align: left;
+    padding: 0 260px 0 0;
+    animation-name: header-img;
+    animation-duration: 5S;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    opacity: 0;
+}
+
+main img {
+    float: right;
+    width: 250px;
+    position: relative;
+    right: -10%;
+    opacity: 0;
+    animation-name: main-img;
+    animation-duration: 3s ;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    
+}
+
+main a {
+    display:  inline-block;
+    text-decoration: none;
+    color:  whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 30px;
+    padding: 1rem;
+    /* margin: 2rem; */
+    animation-name: header-img;
+    animation-duration: 5S;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    opacity: 0;
+    transition-property:transform ;
+    transition-duration: 1s;
+}
+
+main a:hover{
+    transform: rotateY(360deg); 
+    /* transform: scale(1.5) rotate(-5deg); */
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: whitesmoke;
+    padding: 10px;
+}
+
+@keyframes header-h1 {
+    0% {
+        top: -20px;
+        opacity: 0;
+    }
+    100% {
+        top: 50px;
+        opacity: 1;
+    }
+}
+
+
+@keyframes header-text {
+    0% {
+        left: -50%;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes header-img {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes main-img{
+    0% {
+        right: -10%;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+
+}
